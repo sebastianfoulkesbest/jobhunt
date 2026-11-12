@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --paper: #f1f4f7;
+    --surface: #ffffff;
+    --ink: #10202f;
+    --muted: #566677;
+    --rule: #cbd5de;
+    --accent: #2457d6;
+    --ok: #2e7d5b;
+    --warn: #b7791f;
+    --bad: #b4412f;
+    --idle: #aab6c1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e1621;
+      --surface: #152130;
+      --ink: #e7edf3;
+      --muted: #93a3b3;
+      --rule: #263646;
+      --accent: #7aa2ff;
+      --ok: #55b98c;
+      --warn: #d9a441;
+      --bad: #e0705c;
+      --idle: #3b4c5d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1rem/1.5 "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 56rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+
+  header h1 { margin: 0; font-size: 2.25rem; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+  #updated { margin: .4rem 0 0; color: var(--muted); font-size: .9375rem; }
+
+  /* Source strip: one square per site, coloured by how the last run went */
+  .strip-block { margin: 1.5rem 0 1.75rem; }
+  #strip { display: flex; flex-wrap: wrap; gap: 3px; }
+  #strip span { width: 11px; height: 11px; border-radius: 2px; background: var(--idle); }
+  #strip .ok { background: var(--ok); }
+  #strip .empty { background: var(--warn); }
+  #strip .blocked, #strip .error { background: var(--bad); }
+  #strip-summary { margin: .55rem 0 0; color: var(--muted); font-size: .875rem; }
+  #strip-summary a { color: inherit; }
+
+  form#filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: .6rem;
+    margin-bottom: .75rem;
+  }
+  form#filters input[type="search"], form#filters select {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 .7rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    font-size: .9375rem;
+  }
+  .checks { grid-column: 1 / -1; display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: .9375rem; }
+  .checks label { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; }
+  .checks input { width: 1rem; height: 1rem; accent-color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  #count { margin: 0 0 .5rem; color: var(--muted); font-size: .875rem; }
+
+  .group h2 {
+    margin: 2rem 0 .25rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+  }
+  .group h2 small { font-weight: 400; color: var(--muted); font-size: .875rem; margin-left: .4rem; }
+
+  .job {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 13rem;
+    gap: .15rem 1.5rem;
+    padding: .85rem 0 .85rem .9rem;
+    border-top: 1px solid var(--rule);
+  }
+  .job.is-new::before {
+    content: "";
+    position: absolute; left: 0; top: .85rem; bottom: .85rem;
+    width: 3px; border-radius: 2px; background: var(--accent);
+  }
+  .job.closed { opacity: .55; }
+  .title { color: var(--ink); font-weight: 600; font-size: 1.0625rem; line-height: 1.35; text-decoration: none; overflow-wrap: anywhere; }
+  .title:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .kw { grid-column: 1; margin: 0; color: var(--muted); font-size: .875rem; }
+  .side { grid-column: 2; grid-row: 1 / span 2; font-size: .875rem; color: var(--muted); }
+  .side strong { display: block; color: var(--ink); font-weight: 500; }
+  .tag-closed { color: var(--bad); }
+
+  .empty-state { padding: 2.5rem 0; color: var(--muted); max-width: 34rem; }
+  .empty-state code { background: var(--surface); padding: .1rem .35rem; border-radius: 4px; }
+
+  details#sources { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+  details summary { cursor: pointer; font-weight: 600; }
+  #sources table { width: 100%; border-collapse: collapse; margin-top: .75rem; font-size: .875rem; }
+  #sources th, #sources td { text-align: left; padding: .4rem .5rem .4rem 0; border-top: 1px solid var(--rule); vertical-align: top; }
+  #sources th { color: var(--muted); font-weight: 500; }
+  #sources td.s-ok { color: var(--ok); }
+  #sources td.s-empty { color: var(--warn); }
+  #sources td.s-blocked, #sources td.s-error { color: var(--bad); }
+  #sources a { color: var(--ink); }
+  .table-scroll { overflow-x: auto; }
+
+  @media (max-width: 40rem) {
+    .wrap { padding-top: 1.5rem; }
+    header h1 { font-size: 1.85rem; }
+    form#filters { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 1fr; }
+    .side { grid-column: 1; grid-row: auto; margin-top: .2rem; }
+    .side strong { display: inline; margin-right: .5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Postings</h1>
+    <p id="updated">Loading…</p>
+  </header>
+
+  <section class="strip-block" aria-label="Source status">
+    <div id="strip" aria-hidden="true"></div>
+    <p id="strip-summary"></p>
+  </section>
+
+  <form id="filters" role="search" onsubmit="return false">
+    <input type="search" id="q" placeholder="Search titles and sources" aria-label="Search titles and sources">
+    <select id="kw" aria-label="Keyword"><option value="">All keywords</option></select>
+    <select id="src" aria-label="Source"><option value="">All sources</option></select>
+    <div class="checks">
+      <label><input type="checkbox" id="onlyNew"> Only new postings</label>
+      <label><input type="checkbox" id="showClosed"> Include closed postings</label>
+    </div>
+  </form>
+
+  <p id="count" aria-live="polite"></p>
+  <main id="list"></main>
+
+  <details id="sources">
+    <summary>Source status</summary>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Source</th><th>Status</th><th>Matches</th><th>Note</th></tr></thead>
+        <tbody id="sourceRows"></tbody>
+      </table>
+    </div>
+  </details>
+</div>
+
+<script>
+(function () {
+  const NEW_WINDOW_DAYS = 3;
+  const $ = (id) => document.getElementById(id);
+  let data = null;
+
+  function el(tag, props, children) {
+    const node = document.createElement(tag);
+    Object.assign(node, props || {});
+    (children || []).forEach((c) => node.append(c));
+    return node;
+  }
+
+  const dayStart = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  function daysAgo(iso) {
+    return Math.round((dayStart(new Date()) - dayStart(new Date(iso))) / 86400000);
+  }
+  function fmtDate(iso) {
+    return new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  }
+  function ago(iso) {
+    const n = daysAgo(iso);
+    if (n <= 0) return "today";
+    if (n === 1) return "yesterday";
+    if (n < 7) return n + " days ago";
+    return fmtDate(iso);
+  }
+  function groupOf(iso) {
+    const n = daysAgo(iso);
+    if (n <= 0) return "Today";
+    if (n === 1) return "Yesterday";
+    if (n < 7) return "Earlier this week";
+    return "Earlier";
+  }
+  const GROUP_ORDER = ["Today", "Yesterday", "Earlier this week", "Earlier"];
+
+  function isNew(job) {
+    return new Date(job.first_seen) > new Date(data.created) && daysAgo(job.first_seen) < NEW_WINDOW_DAYS;
+  }
+
+  function message(html) {
+    const box = el("div", { className: "empty-state" });
+    box.innerHTML = html;
+    $("list").replaceChildren(box);
+  }
+
+  function fillSelect(select, values) {
+    const first = select.options[0];
+    select.replaceChildren(first, ...values.map((v) => el("option", { value: v, textContent: v })));
+  }
+
+  function renderStrip() {
+    const sources = data.sources || [];
+    $("strip").replaceChildren(...sources.map((s) =>
+      el("span", { className: s.status, title: s.name + ": " + s.status })));
+    const count = (st) => sources.filter((s) => s.status === st).length;
+    const problems = sources.length - count("ok");
+    $("strip-summary").textContent =
+      count("ok") + " of " + sources.length + " sources read without problems" +
+      (problems ? "; " + problems + " blocked, empty or failed (see Source status below)." : ".");
+
+    $("sourceRows").replaceChildren(...sources.map((s) => {
+      const nameCell = el("td");
+      nameCell.append(el("a", { href: s.url, textContent: s.name, target: "_blank", rel: "noopener" }));
+      return el("tr", {}, [
+        nameCell,
+        el("td", { className: "s-" + s.status, textContent: s.status }),
+        el("td", { textContent: String(s.matches) }),
+        el("td", { textContent: s.message || "" }),
+      ]);
+    }));
+  }
+
+  function render() {
+    const q = $("q").value.trim().toLowerCase();
+    const kw = $("kw").value;
+    const src = $("src").value;
+    const onlyNew = $("onlyNew").checked;
+    const showClosed = $("showClosed").checked;
+
+    const rows = data.jobs.filter((j) =>
+      (showClosed || j.active) &&
+      (!kw || j.matched.includes(kw)) &&
+      (!src || j.source === src) &&
+      (!onlyNew || isNew(j)) &&
+      (!q || (j.title + " " + j.source).toLowerCase().includes(q))
+    ).sort((a, b) => b.first_seen.localeCompare(a.first_seen) || a.title.localeCompare(b.title));
+
+    $("count").textContent = rows.length + (rows.length === 1 ? " posting" : " postings");
+
+    if (!rows.length) {
+      message(data.jobs.length
+        ? "Nothing matches these filters. Clear a filter, or add keywords in <code>config.yaml</code>."
+        : "No postings yet. The scraper ran but found nothing matching your keywords. Check <strong>Source status</strong> below to see which sites worked.");
+      return;
+    }
+
+    const groups = {};
+    rows.forEach((j) => (groups[groupOf(j.first_seen)] ||= []).push(j));
+
+    const frag = document.createDocumentFragment();
+    GROUP_ORDER.filter((g) => groups[g]).forEach((g) => {
+      const section = el("section", { className: "group" });
+      section.append(el("h2", {}, [g, el("small", { textContent: String(groups[g].length) })]));
+      groups[g].forEach((j) => {
+        const row = el("article", { className: "job" + (isNew(j) ? " is-new" : "") + (j.active ? "" : " closed") });
+        row.append(el("a", { className: "title", href: j.url, textContent: j.title, target: "_blank", rel: "noopener" }));
+        if (j.matched.length) row.append(el("p", { className: "kw", textContent: j.matched.join(", ") }));
+        const side = el("div", { className: "side" }, [
+          el("strong", { textContent: j.source }),
+          document.createTextNode("Found " + ago(j.first_seen)),
+        ]);
+        if (!j.active) side.append(el("span", { className: "tag-closed", textContent: " (no longer listed)" }));
+        row.append(side);
+        section.append(row);
+      });
+      frag.append(section);
+    });
+    $("list").replaceChildren(frag);
+  }
+
+  async function load() {
+    try {
+      const res = await fetch("jobs.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      data = await res.json();
+    } catch (err) {
+      $("updated").textContent = "";
+      if (location.protocol === "file:") {
+        message("This page cannot read <code>jobs.json</code> when opened as a file. Run <code>python -m http.server -d docs</code> and open <code>http://localhost:8000</code>.");
+      } else {
+        message("No data yet. Run <code>python scraper.py</code>, or start the <strong>Scrape jobs</strong> workflow on GitHub.");
+      }
+      return;
+    }
+
+    $("updated").textContent = data.updated
+      ? "Updated " + fmtDate(data.updated) + " at " + new Date(data.updated).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+      : "";
+
+    const kws = [...new Set(data.jobs.flatMap((j) => j.matched))].sort((a, b) => a.localeCompare(b));
+    const srcs = [...new Set(data.jobs.map((j) => j.source))].sort((a, b) => a.localeCompare(b));
+    fillSelect($("kw"), kws);
+    fillSelect($("src"), srcs);
+
+    renderStrip();
+    render();
+  }
+
+  ["q", "kw", "src", "onlyNew", "showClosed"].forEach((id) => {
+    $(id).addEventListener(id === "q" ? "input" : "change", () => data && render());
+  });
+  load();
+})();
+</script>
+</body>
+</html>

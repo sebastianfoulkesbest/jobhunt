@@ -1,0 +1,311 @@
+# ---------------------------------------------------------------------------
+# Job board settings. Edit this file, commit it, and the next run uses it.
+# ---------------------------------------------------------------------------
+
+# A posting is kept when its link text (or the end of its URL) contains one of
+# these. Case, accents, apostrophes and dashes are ignored, and plural or
+# feminine endings are allowed ("analyste" also matches "analystes").
+#   plain words -> whole phrase    policy analyst
+#   word*       -> word starts so  geopolit* matches geopolitics, geopolitical
+# English and French versions are listed separately on purpose.
+keywords:
+  - "Public Affairs"
+  - "Affaires publiques"
+  - "Government Relations"
+  - "Relations institutionnelles"
+  - "Lobbying"
+  - "Advocacy"
+  - "Plaidoyer"
+  - "Stakeholder Engagement"
+  - "Relations avec les parties prenantes"
+  - "Institutional Relations"
+  - "Public Policy"
+  - "Politiques publiques"
+  - "Policy Analysis"
+  - "Analyse des politiques publiques"
+  - "Legislative Affairs"
+  - "Affaires parlementaires"
+  - "Regulatory Affairs"
+  - "Affaires réglementaires"
+  - "Political Affairs"
+  - "Affaires politiques"
+  - "Government Affairs"
+  - "Relations gouvernementales"
+  - "Interest Representation"
+  - "Représentation d'intérêts"
+  - "Political Consulting"
+  - "Conseil en affaires publiques"
+  - "Strategic Communications"
+  - "Communication stratégique"
+  - "Geopolitics"
+  - "Géopolitique"
+  - "International Relations"
+  - "Relations internationales"
+  - "International Affairs"
+  - "Affaires internationales"
+  - "Strategic Affairs"
+  - "Affaires stratégiques"
+  - "Foreign Policy"
+  - "Politique étrangère"
+  - "International Security"
+  - "Sécurité internationale"
+  - "Political Risk Analysis"
+  - "Analyse du risque politique"
+  - "Geopolitical Risk"
+  - "Risque géopolitique"
+  - "Strategic Analysis"
+  - "Analyse stratégique"
+  - "International Cooperation"
+  - "Coopération internationale"
+  - "Multilateral Affairs"
+  - "Affaires multilatérales"
+  - "Diplomatic Relations"
+  - "Relations diplomatiques"
+  - "Strategic Autonomy"
+  - "Autonomie stratégique"
+  - "Global Governance"
+  - "Gouvernance mondiale"
+  - "International Political Economy"
+  - "Économie politique internationale"
+  - "Defence Policy"
+  - "Politique de défense"
+  - "Defence and Security"
+  - "Défense et sécurité"
+  - "Defence Affairs"
+  - "Affaires de défense"
+  - "National Security"
+  - "Sécurité nationale"
+  - "European Security"
+  - "Sécurité européenne"
+  - "European Defence"
+  - "Défense européenne"
+  - "Defence Industry"
+  - "Industrie de défense"
+  - "Defence Cooperation"
+  - "Coopération de défense"
+  - "Military Affairs"
+  - "Affaires militaires"
+  - "Security Policy"
+  - "Politique de sécurité"
+  - "Strategic Studies"
+  - "Études stratégiques"
+  - "Defence Procurement"
+  - "Achats de défense"
+  - "Arms Control"
+  - "Maîtrise des armements"
+  - "Crisis Management"
+  - "Gestion de crise"
+  - "Intelligence Analysis"
+  - "Analyse du renseignement"
+  - "Sovereignty"
+  - "Souveraineté"
+  - "Defence Industrial Base"
+  - "Base industrielle et technologique de défense"
+  - "Latin American Affairs"
+  - "Affaires latino-américaines"
+  - "Latin American Studies"
+  - "Études latino-américaines"
+  - "Latin America"
+  - "Amérique latine"
+  - "Latin American Politics"
+  - "Politique latino-américaine"
+  - "Inter-American Relations"
+  - "Relations interaméricaines"
+  - "Americas Policy"
+  - "Politique relative aux Amériques"
+  - "US–Latin America Relations"
+  - "Relations États-Unis–Amérique latine"
+  - "EU–Latin America Relations"
+  - "Relations UE–Amérique latine"
+  - "France–Latin America Relations"
+  - "Relations France–Amérique latine"
+  - "International Development"
+  - "Développement international"
+  - "Regional Integration"
+  - "Intégration régionale"
+  - "Trade and Investment"
+  - "Commerce et investissement"
+  - "Emerging Markets"
+  - "Marchés émergents"
+  - "Political Economy of Latin America"
+  - "Économie politique de l'Amérique latine"
+  - "Migration Policy"
+  - "Politiques migratoires"
+  - "European Affairs"
+  - "Affaires européennes"
+  - "EU Affairs"
+  - "European Integration"
+  - "Intégration européenne"
+  - "EU Institutions"
+  - "Institutions européennes"
+  - "European Policy"
+  - "Politiques européennes"
+  - "Transatlantic Relations"
+  - "Relations transatlantiques"
+  - "EU–US Relations"
+  - "Relations UE–États-Unis"
+  - "NATO Affairs"
+  - "Affaires de l'OTAN"
+  - "European Strategic Autonomy"
+  - "Autonomie stratégique européenne"
+  - "European Sovereignty"
+  - "Souveraineté européenne"
+  - "Economic Security"
+  - "Sécurité économique"
+  - "Economic Statecraft"
+  - "Diplomatie économique"
+  - "International Trade Policy"
+  - "Politique commerciale internationale"
+  - "Trade Relations"
+  - "Relations commerciales"
+  - "Foreign Economic Policy"
+  - "Politique économique extérieure"
+  - "Political Risk"
+  - "Risque politique"
+  - "Country Risk Analysis"
+  - "Analyse du risque-pays"
+  - "Geopolitical Intelligence"
+  - "Veille géopolitique"
+  - "Strategic Intelligence"
+  - "Veille stratégique"
+  - "Political Intelligence"
+  - "Veille politique"
+  - "Risk Assessment"
+  - "Évaluation des risques"
+  - "Regulatory Intelligence"
+  - "Veille réglementaire"
+  - "International Business"
+  - "Commerce international"
+  - "International Trade"
+  - "Economic Diplomacy"
+  - "Corporate Diplomacy"
+  - "Diplomatie d'entreprise"
+  - "Economic Sovereignty"
+  - "Souveraineté économique"
+  - "Economic Warfare"
+  - "Guerre économique"
+  - "Economic Coercion"
+  - "Coercition économique"
+  - "Extraterritoriality"
+  - "Extraterritorialité"
+  - "Sanctions Policy"
+  - "Politique de sanctions"
+  - "International Economic Relations"
+  - "Relations économiques internationales"
+  - "Public Affairs Consultant"
+  - "Consultant en affaires publiques"
+  - "Public Affairs Officer"
+  - "Chargé d'affaires publiques"
+  - "Government Relations Officer"
+  - "Chargé des relations institutionnelles"
+  - "Policy Analyst"
+  - "Analyste des politiques publiques"
+  - "Political Analyst"
+  - "Analyste politique"
+  - "Geopolitical Risk Analyst"
+  - "Analyste en risques géopolitiques"
+  - "International Relations Officer"
+  - "Chargé de relations internationales"
+  - "Defence Policy Analyst"
+  - "Analyste en politique de défense"
+  - "European Affairs Officer"
+  - "Chargé d'affaires européennes"
+  - "International Affairs Consultant"
+  - "Consultant en affaires internationales"
+  - "Strategic Intelligence Analyst"
+  - "Analyste en veille stratégique"
+  - "Parliamentary Affairs Officer"
+  - "Chargé des affaires parlementaires"
+  - "Lobbying Consultant"
+  - "Consultant en lobbying"
+  - "Research Analyst"
+  - "Analyste de recherche"
+  - "International Development Officer"
+  - "Chargé de coopération internationale"
+  - "Country Risk Analyst"
+  - "Analyste risque-pays"
+  - "Latin America Analyst"
+  - "Analyste Amérique latine"
+  - "Political Risk Consultant"
+  - "Consultant en risques politiques"
+  - "Advocacy Officer"
+  - "Chargé de plaidoyer"
+  - "Institutional Relations Manager"
+  - "Responsable des relations institutionnelles"
+
+# Links containing any of these are ignored: menus, legal pages, and
+# anything internship-related (you are looking for a job).
+# Whole words only, so "intern" does not block "international".
+exclude:
+  - privacy policy
+  - cookie
+  - politique de confidentialite
+  - mentions legales
+  - terms of use
+  - newsletter
+  - sign in
+  - log in
+  - login
+  - connexion
+  - accessibility
+  - accessibilite
+  - "stage*"
+  - "stagiaire*"
+  - intern
+  - interns
+  - "internship*"
+  - "trainee*"
+  - "traineeship*"
+  - "alternance*"
+  - "apprenti*"
+  - work study
+
+# Sites to check. Only name and url are required. Optional per-site settings:
+#   render: js          load the page in a real browser first (for sites that
+#                       build their job list with JavaScript)
+#   take_all: true      keep every link that looks like a job, ignoring keywords
+#   match_context: true also look at the text around the link, not just the link
+#   ignore_robots: true skip the robots.txt check (only for sites you are allowed
+#                       to read automatically)
+# The scraper respects robots.txt by default. Blocked sites show up as
+# "blocked" in the Source status list on the board.
+sites:
+  - {name: OECD, url: "https://careers.smartrecruiters.com/OECD/oecd---en"}
+  - {name: ECFR, url: "https://ecfr.eu/jobs/"}
+  - {name: ICC, url: "https://www.icc-cpi.int/jobs", render: js}
+  - {name: HATVP, url: "https://www.hatvp.fr/emploi/"}
+  - {name: IRIS, url: "https://www.iris-france.org/recrutement/"}
+  - {name: FRS, url: "https://www.frstrategie.org/frs/emplois-stages"}
+  - {name: Ville de Lyon, url: "https://recrutement.lyon.fr/front-jobs.html?direct", render: js}
+  - {name: AFD, url: "https://afd.csod.com/ux/ats/careersite/5/home?c=afd", render: js}
+  - {name: ICRC, url: "https://careers.icrc.org/go/All-Jobs/3807301/"}
+  - {name: UNESCO jobs (all), url: "https://careers.unesco.org/go/All-jobs-openings/782502/"}
+  - {name: UK FCDO, url: "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/", render: js}
+  - {name: Global Affairs Canada, url: "https://dotation-erp.international.gc.ca/fr/recherche/", render: js}
+  - {name: Ireland in France, url: "https://www.ireland.ie/en/france/paris/about/job-opportunities/"}
+  - {name: Australian embassy Paris, url: "https://france.embassy.gov.au/pari/Recruitment_paris.html"}
+  - {name: Institut francais Spain, url: "https://www.institutfrancais.es/el-institut/ofertas-de-empleo-y-practicas/"}
+  - {name: Safran, url: "https://www.safran-group.com/fr/offres", render: js}
+  - {name: Thales, url: "https://careers.thalesgroup.com/fr/fr/search-results", render: js}
+  - {name: CMA CGM, url: "https://jobs.cmacgm-group.com/", render: js}
+  - {name: TotalEnergies, url: "https://jobs.totalenergies.com/fr_FR/careers/SearchJobs/?707=%5B42254%5D&707_format=1393&listFilterMode=1&jobRecordsPerPage=20&", render: js}
+  - {name: Veolia, url: "https://jobs.veolia.com/fr/recherche-d%27offres?glat=19.2981&glon=-99.1825", render: js}
+  - {name: Suez, url: "https://hris-suez.csod.com/ux/ats/careersite/10/home/?c=hris-suez&cfdd[0][id]=137&cfdd[0][options][0]=2130&lang=en-GB", render: js}
+  - {name: Institut Jacques Delors, url: "https://institutdelors.eu/rejoignez-notre-equipe/"}
+  - {name: CNCDH, url: "https://www.cncdh.fr/emplois-et-stages"}
+  - {name: Defenseur des droits, url: "https://defenseurdesdroits.nous-recrutons.fr/", render: js}
+  - {name: Arcom, url: "https://arcom.nous-recrutons.fr/", render: js}
+  - {name: CRE, url: "https://cre.nos-recrutements.fr/jobs?page=1", render: js}
+  - {name: CESE, url: "https://www.lecese.fr/services-en-ligne/offres-emploi"}
+  - {name: UNV, url: "https://app.unv.org/", render: js}
+  - {name: WEF, url: "https://weforum.wd3.myworkdayjobs.com/Forum_Careers", render: js}
+  - {name: Radio France, url: "https://radiofrance-recrute.talent-soft.com/offre-de-emploi/liste-toutes-offres.aspx?all=1&mode=list#ancrecontenu", render: js}
+  - {name: SuccessFactors board 1657261P, url: "https://career5.successfactors.eu/career?company=1657261P&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5fSEARCH", render: js}
+  - {name: Jobs2web 209400, url: "https://209400.jobs2web.com/", render: js}
+  - {name: Mission politique, url: "https://missionpolitique.com/"}
+  - {name: Emplois politiques, url: "https://www.emplois-politiques.fr/les-offres-d-emplois"}
+  - {name: France Strategie, url: "https://www.strategie-plan.gouv.fr/offres-demploi"}
+  - {name: Export Development Canada, url: "https://apply.workable.com/export-development-canada/?lng=en", render: js}
+
+# Not included on purpose: LinkedIn pages. LinkedIn forbids automated scraping
+# and blocks it. Use LinkedIn's own job alerts for those.
