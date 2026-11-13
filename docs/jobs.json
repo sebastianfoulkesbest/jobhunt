@@ -11,7 +11,7 @@
     "Risk Assessment"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -24,7 +24,7 @@
     "Policy Analysis"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -37,7 +37,7 @@
     "Political Affairs"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -50,7 +50,7 @@
     "Security Policy"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -63,7 +63,7 @@
     "Relations institutionnelles"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -76,7 +76,7 @@
     "Emerging Markets"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   },
   {
@@ -89,11 +89,11 @@
     "Latin America"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-12T23:51:55Z",
+   "last_seen": "2026-11-13T06:54:30Z",
    "active": true
   }
  ],
- "updated": "2026-11-12T23:51:55Z",
+ "updated": "2026-11-13T06:54:30Z",
  "keywords": [
   "Public Affairs",
   "Affaires publiques",
@@ -421,9 +421,9 @@
   {
    "name": "Institut francais Spain",
    "url": "https://www.institutfrancais.es/el-institut/ofertas-de-empleo-y-practicas/",
-   "status": "empty",
+   "status": "error",
    "matches": 0,
-   "message": "The page came back almost empty. Try adding render: js for this site."
+   "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
   },
   {
    "name": "Safran",
@@ -435,9 +435,9 @@
   {
    "name": "Thales",
    "url": "https://careers.thalesgroup.com/fr/fr/search-results",
-   "status": "error",
+   "status": "ok",
    "matches": 0,
-   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://careers.thalesgroup.com/fr/fr/search-results\", waiting until \"networkidle\"\n"
+   "message": ""
   },
   {
    "name": "CMA CGM",
