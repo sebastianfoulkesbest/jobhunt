@@ -11,7 +11,7 @@
     "Risk Assessment"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -24,7 +24,7 @@
     "Policy Analysis"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -37,7 +37,7 @@
     "Political Affairs"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -50,7 +50,7 @@
     "Security Policy"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -63,7 +63,7 @@
     "Relations institutionnelles"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -76,7 +76,7 @@
     "Emerging Markets"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   },
   {
@@ -89,11 +89,24 @@
     "Latin America"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-13T11:49:20Z",
+   "last_seen": "2026-11-14T06:43:38Z",
+   "active": true
+  },
+  {
+   "id": "06becd5a2bbd",
+   "title": "Souveraineté #Defense&Space",
+   "url": "https://www.safran-group.com/fr/souverainete",
+   "source": "Safran",
+   "source_url": "https://www.safran-group.com/fr/offres",
+   "matched": [
+    "Souveraineté"
+   ],
+   "first_seen": "2026-11-14T06:43:38Z",
+   "last_seen": "2026-11-14T06:43:38Z",
    "active": true
   }
  ],
- "updated": "2026-11-13T11:49:20Z",
+ "updated": "2026-11-14T06:43:38Z",
  "keywords": [
   "Public Affairs",
   "Affaires publiques",
@@ -428,23 +441,23 @@
   {
    "name": "Safran",
    "url": "https://www.safran-group.com/fr/offres",
-   "status": "error",
-   "matches": 0,
-   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.safran-group.com/fr/offres\", waiting until \"networkidle\"\n"
+   "status": "ok",
+   "matches": 1,
+   "message": ""
   },
   {
    "name": "Thales",
    "url": "https://careers.thalesgroup.com/fr/fr/search-results",
-   "status": "ok",
+   "status": "error",
    "matches": 0,
-   "message": ""
+   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://careers.thalesgroup.com/fr/fr/search-results\", waiting until \"networkidle\"\n"
   },
   {
    "name": "CMA CGM",
    "url": "https://jobs.cmacgm-group.com/",
-   "status": "ok",
+   "status": "error",
    "matches": 0,
-   "message": ""
+   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://jobs.cmacgm-group.com/\", waiting until \"networkidle\"\n"
   },
   {
    "name": "TotalEnergies",
@@ -540,9 +553,9 @@
   {
    "name": "Jobs2web 209400",
    "url": "https://209400.jobs2web.com/",
-   "status": "ok",
+   "status": "empty",
    "matches": 0,
-   "message": ""
+   "message": "The page came back almost empty."
   },
   {
    "name": "Mission politique",
