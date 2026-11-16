@@ -11,7 +11,7 @@
     "Risk Assessment"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -24,7 +24,7 @@
     "Policy Analysis"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -37,7 +37,7 @@
     "Political Affairs"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -50,7 +50,7 @@
     "Security Policy"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -63,7 +63,7 @@
     "Relations institutionnelles"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -76,7 +76,7 @@
     "Emerging Markets"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -89,7 +89,7 @@
     "Latin America"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-15T06:46:38Z",
+   "last_seen": "2026-11-16T08:08:22Z",
    "active": true
   },
   {
@@ -104,9 +104,49 @@
    "first_seen": "2026-11-14T06:43:38Z",
    "last_seen": "2026-11-14T06:43:38Z",
    "active": true
+  },
+  {
+   "id": "134d5dc3ef45",
+   "title": "TW - Senior Political Analyst, EO (Paternity Cover)",
+   "url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-1/brand-2/candidate/so/pm/4/pl/1/opp/27783-TW-Senior-Political-Analyst-EO-Paternity-Cover/en-GB",
+   "source": "UK FCDO",
+   "source_url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/",
+   "matched": [
+    "Political Analyst"
+   ],
+   "first_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-16T08:08:22Z",
+   "active": true
+  },
+  {
+   "id": "0b1cf26e51b9",
+   "title": "Trade and Investment Officer HEO - KG",
+   "url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-1/brand-2/candidate/so/pm/4/pl/1/opp/27799-Trade-and-Investment-Officer-HEO-KG/en-GB",
+   "source": "UK FCDO",
+   "source_url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/",
+   "matched": [
+    "Trade and Investment"
+   ],
+   "first_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-16T08:08:22Z",
+   "active": true
+  },
+  {
+   "id": "43e29366f3cc",
+   "title": "Senior Social Media and Public Affairs Officer (CZE26-022061)",
+   "url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-1/brand-2/candidate/so/pm/4/pl/1/opp/27824-Senior-Social-Media-and-Public-Affairs-Officer-CZE26-022061/en-GB",
+   "source": "UK FCDO",
+   "source_url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/",
+   "matched": [
+    "Public Affairs",
+    "Public Affairs Officer"
+   ],
+   "first_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-16T08:08:22Z",
+   "active": true
   }
  ],
- "updated": "2026-11-15T06:46:38Z",
+ "updated": "2026-11-16T08:08:22Z",
  "keywords": [
   "Public Affairs",
   "Affaires publiques",
@@ -407,7 +447,7 @@
    "name": "UK FCDO",
    "url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/",
    "status": "ok",
-   "matches": 2,
+   "matches": 5,
    "message": ""
   },
   {
@@ -434,9 +474,9 @@
   {
    "name": "Institut francais Spain",
    "url": "https://www.institutfrancais.es/el-institut/ofertas-de-empleo-y-practicas/",
-   "status": "error",
+   "status": "empty",
    "matches": 0,
-   "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+   "message": "The page came back almost empty. Try adding render: js for this site."
   },
   {
    "name": "Safran",
