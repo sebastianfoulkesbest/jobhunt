@@ -11,7 +11,7 @@
     "Risk Assessment"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -24,7 +24,7 @@
     "Policy Analysis"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -38,7 +38,7 @@
    ],
    "first_seen": "2026-11-12T23:51:55Z",
    "last_seen": "2026-11-16T08:08:22Z",
-   "active": true
+   "active": false
   },
   {
    "id": "cc2584937222",
@@ -50,7 +50,7 @@
     "Security Policy"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -63,7 +63,7 @@
     "Relations institutionnelles"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -76,7 +76,7 @@
     "Emerging Markets"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -89,7 +89,7 @@
     "Latin America"
    ],
    "first_seen": "2026-11-12T23:51:55Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -115,7 +115,7 @@
     "Political Analyst"
    ],
    "first_seen": "2026-11-16T08:08:22Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -128,7 +128,7 @@
     "Trade and Investment"
    ],
    "first_seen": "2026-11-16T08:08:22Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   },
   {
@@ -142,11 +142,24 @@
     "Public Affairs Officer"
    ],
    "first_seen": "2026-11-16T08:08:22Z",
-   "last_seen": "2026-11-16T08:08:22Z",
+   "last_seen": "2026-11-17T06:56:50Z",
+   "active": true
+  },
+  {
+   "id": "dc86dfe71e30",
+   "title": "Temporary Junior Policy Analyst – Research and Statistics Full-time",
+   "url": "https://jobs.smartrecruiters.com/OECD/744000161803898-temporary-junior-policy-analyst-research-and-statistics-?trid=3b3fd07c-0791-4ac8-9ea8-cc2477730cb5",
+   "source": "OECD",
+   "source_url": "https://careers.smartrecruiters.com/OECD/oecd---en",
+   "matched": [
+    "Policy Analyst"
+   ],
+   "first_seen": "2026-11-17T06:56:50Z",
+   "last_seen": "2026-11-17T06:56:50Z",
    "active": true
   }
  ],
- "updated": "2026-11-16T08:08:22Z",
+ "updated": "2026-11-17T06:56:50Z",
  "keywords": [
   "Public Affairs",
   "Affaires publiques",
@@ -377,7 +390,7 @@
    "name": "OECD",
    "url": "https://careers.smartrecruiters.com/OECD/oecd---en",
    "status": "ok",
-   "matches": 1,
+   "matches": 2,
    "message": ""
   },
   {
@@ -406,7 +419,7 @@
    "url": "https://www.iris-france.org/recrutement/",
    "status": "error",
    "matches": 0,
-   "message": "HTTPError: 520 Server Error: <none> for url: https://www.iris-france.org/recrutement/"
+   "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.iris-france.org/recrutement/"
   },
   {
    "name": "FRS",
@@ -447,7 +460,7 @@
    "name": "UK FCDO",
    "url": "https://fco.tal.net/vx/lang-en-GB/mobile-0/appcentre-ext/brand-2/xf-a904d386573c/candidate/jobboard/vacancy/1/adv/",
    "status": "ok",
-   "matches": 5,
+   "matches": 4,
    "message": ""
   },
   {
@@ -474,9 +487,9 @@
   {
    "name": "Institut francais Spain",
    "url": "https://www.institutfrancais.es/el-institut/ofertas-de-empleo-y-practicas/",
-   "status": "empty",
+   "status": "error",
    "matches": 0,
-   "message": "The page came back almost empty. Try adding render: js for this site."
+   "message": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
   },
   {
    "name": "Safran",
@@ -488,16 +501,16 @@
   {
    "name": "Thales",
    "url": "https://careers.thalesgroup.com/fr/fr/search-results",
-   "status": "ok",
+   "status": "error",
    "matches": 0,
-   "message": ""
+   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://careers.thalesgroup.com/fr/fr/search-results\", waiting until \"networkidle\"\n"
   },
   {
    "name": "CMA CGM",
    "url": "https://jobs.cmacgm-group.com/",
-   "status": "ok",
+   "status": "error",
    "matches": 0,
-   "message": ""
+   "message": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://jobs.cmacgm-group.com/\", waiting until \"networkidle\"\n"
   },
   {
    "name": "TotalEnergies",
@@ -523,9 +536,9 @@
   {
    "name": "Institut Jacques Delors",
    "url": "https://institutdelors.eu/rejoignez-notre-equipe/",
-   "status": "ok",
+   "status": "error",
    "matches": 0,
-   "message": ""
+   "message": "ReadTimeout: HTTPSConnectionPool(host='institutdelors.eu', port=443): Read timed out. (read timeout=25)"
   },
   {
    "name": "CNCDH",
