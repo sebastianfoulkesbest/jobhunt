@@ -2,7 +2,7 @@ name: Scrape jobs
 
 on:
   schedule:
-    - cron: "1 6 5 7 "   # every day at 06:00 UTC (07:00 in Paris in winter)
+    - cron: "10 17 * * *"   # every day at 06:00 UTC (07:00 in Paris in winter)
   workflow_dispatch:       # lets you run it by hand from the Actions tab
 
 permissions:
