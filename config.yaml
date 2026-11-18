@@ -354,6 +354,11 @@ sites:
   - {name: Emplois politiques, url: "https://www.emplois-politiques.fr/les-offres-d-emplois"}
   - {name: France Strategie, url: "https://www.strategie-plan.gouv.fr/offres-demploi"}
   - {name: Export Development Canada, url: "https://apply.workable.com/export-development-canada/?lng=en", render: js}
+  - {name: Ipsos, url: "https://recrutement.ipsos.com/", render: js}
+  - {name: Ifop, url: "https://www.ifopgroup.com/rejoignez-nous/"}
+  - {name: OpinionWay, url: "https://www.opinion-way.com/fr/nous-rejoindre/nos-offres-demploi/"}
+  - {name: Elabe, url: "https://elabe.fr/nous-rejoindre/"}
+  - {name: Havas (Workday, toutes offres), url: "https://wd3.myworkdaysite.com/fr-FR/recruiting/havas/GroupExternalCareerSite", render: js}
 
 # Not included on purpose: LinkedIn pages. LinkedIn forbids automated scraping
 # and blocks it. Use LinkedIn's own job alerts for those.
