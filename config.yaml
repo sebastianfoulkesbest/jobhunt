@@ -332,7 +332,6 @@ sites:
   - {name: Global Affairs Canada, url: "https://dotation-erp.international.gc.ca/fr/recherche/", render: js}
   - {name: Ireland in France, url: "https://www.ireland.ie/en/france/paris/about/job-opportunities/"}
   - {name: Australian embassy Paris, url: "https://france.embassy.gov.au/pari/Recruitment_paris.html"}
-  - {name: Institut francais Spain, url: "https://www.institutfrancais.es/el-institut/ofertas-de-empleo-y-practicas/"}
   - {name: Safran, url: "https://www.safran-group.com/fr/offres", render: js}
   - {name: Thales, url: "https://careers.thalesgroup.com/fr/fr/search-results", render: js}
   - {name: CMA CGM, url: "https://jobs.cmacgm-group.com/", render: js}
@@ -348,9 +347,9 @@ sites:
   - {name: UNV, url: "https://app.unv.org/", render: js}
   - {name: WEF, url: "https://weforum.wd3.myworkdayjobs.com/Forum_Careers", render: js}
   - {name: Radio France, url: "https://radiofrance-recrute.talent-soft.com/offre-de-emploi/liste-toutes-offres.aspx?all=1&mode=list#ancrecontenu", render: js}
-  - {name: SuccessFactors board 1657261P, url: "https://career5.successfactors.eu/career?company=1657261P&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5fSEARCH", render: js}
-  - {name: Jobs2web 209400, url: "https://209400.jobs2web.com/", render: js}
-  - {name: Mission politique, url: "https://missionpolitique.com/"}
+  - {name: ICC - CPI, url: "https://career5.successfactors.eu/career?company=1657261P&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5fSEARCH", render: js}
+  - {name: INTERPOL, url: "https://209400.jobs2web.com/", render: js}
+  - {name: Mission politique, url: "https://missionpolitique.com/", render: js}
   - {name: Emplois politiques, url: "https://www.emplois-politiques.fr/les-offres-d-emplois"}
   - {name: France Strategie, url: "https://www.strategie-plan.gouv.fr/offres-demploi"}
   - {name: Export Development Canada, url: "https://apply.workable.com/export-development-canada/?lng=en", render: js}
@@ -358,7 +357,7 @@ sites:
   - {name: Ifop, url: "https://www.ifopgroup.com/rejoignez-nous/"}
   - {name: OpinionWay, url: "https://www.opinion-way.com/fr/nous-rejoindre/nos-offres-demploi/"}
   - {name: Elabe, url: "https://elabe.fr/nous-rejoindre/"}
-  - {name: Havas (Workday, toutes offres), url: "https://wd3.myworkdaysite.com/fr-FR/recruiting/havas/GroupExternalCareerSite", render: js}
+  - {name: Havas, toutes offres), url: "https://wd3.myworkdaysite.com/fr-FR/recruiting/havas/GroupExternalCareerSite", render: js}
 
 # Not included on purpose: LinkedIn pages. LinkedIn forbids automated scraping
 # and blocks it. Use LinkedIn's own job alerts for those.
